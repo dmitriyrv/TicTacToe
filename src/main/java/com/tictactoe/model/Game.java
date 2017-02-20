@@ -5,8 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Game {
-    private int gameId;
-    private String gameName;
+    private int id;
+    private String name;
     private Status status;
     private Map<Integer, Integer> moves = new HashMap<>();
 
@@ -30,9 +30,9 @@ public class Game {
     }
 
 
-    public Game(int gameId, String gameName, Status status, Map<Integer, Integer> moves) {
-        this.gameId = gameId;
-        this.gameName = gameName;
+    public Game(int id, String name, Status status, Map<Integer, Integer> moves) {
+        this.id = id;
+        this.name = name;
         this.status = status;
         if (moves != null)
             this.moves = moves;
@@ -40,20 +40,20 @@ public class Game {
 
     public Game(){}
 
-    public int getGameId() {
-        return gameId;
+    public int getId() {
+        return id;
     }
 
-    public void setGameId(int gameId) {
-        this.gameId = gameId;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getGameName() {
-        return gameName;
+    public String getName() {
+        return name;
     }
 
-    public void setGameName(String gameName) {
-        this.gameName = gameName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Status getStatus() {

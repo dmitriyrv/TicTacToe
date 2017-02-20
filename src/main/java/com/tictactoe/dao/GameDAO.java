@@ -3,6 +3,7 @@ package com.tictactoe.dao;
 import com.tictactoe.model.Game;
 
 import java.util.List;
+import java.util.Map;
 
 
 public interface GameDAO {
@@ -13,7 +14,13 @@ public interface GameDAO {
 
     List<Game> getAllGames();
 
-    /*Game getGameById(int gameId);
+    Game findGameById(int id);
+    
+    Map<Integer, Integer> findMovesInGame(Game game);
+    Map<Integer, Integer> findMovesInGame(int gameId);
+    
+
+    /*
 
     boolean gameExists(int gameId);*/
 }

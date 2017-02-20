@@ -4,7 +4,7 @@ import com.tictactoe.api.RestApi;
 import com.tictactoe.model.Game;
 import com.tictactoe.service.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,7 +20,12 @@ public class RestApiController implements RestApi {
     }
 
     @Override
-    public int newGame(Game newGame) {
+    public Game newGame(@RequestBody Game newGame) {
         return gameService.newGame(newGame);
+    }
+    
+    @Override
+    public Game getGameById(@PathVariable("id") int id) {
+        return gameService.getById(id);
     }
 }
